@@ -63,9 +63,7 @@ def load_image_into_numpy_array(image):
 # Detection
 with detection_graph.as_default():
   with tf.Session(graph=detection_graph) as sess:
-    ############### Add ###############
     prevTime = 0  # Frame time variable
-    ###################################
     while True:
       ret, image_np = cap.read()
       # Expand dimensions since the model expects images to have shape: [1, None, None, 3]
