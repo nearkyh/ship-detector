@@ -60,7 +60,7 @@ def load_image_into_numpy_array(image):
 # Detection
 with detection_graph.as_default():
   with tf.Session(graph=detection_graph) as sess:
-    ############### 추가 ###############
+    ############### Add ###############
     prevTime = 0  # Frame time variable
     ###################################
     while True:
