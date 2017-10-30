@@ -13,7 +13,12 @@ from matplotlib import pyplot as plt
 from PIL import Image
 
 import cv2
-cap = cv2.VideoCapture(0)
+
+CAM_ID = 0
+cap = cv2.VideoCapture(CAM_ID)
+if cap.isOpened() == False:
+  print('Can\'t open the CAM(%d)' % (CAM_ID))
+  exit()
 
 # This is needed since the notebook is stored in the object_detection folder.
 sys.path.append("..")
@@ -59,7 +64,7 @@ def load_image_into_numpy_array(image):
 with detection_graph.as_default():
   with tf.Session(graph=detection_graph) as sess:
     ############### 추가 ###############
-    prevTime = 0 #이전 시간을 저장할 변수
+    prevTime = 0  # Frame time variable
     ###################################
     while True:
       ret, image_np = cap.read()
@@ -122,30 +127,16 @@ with detection_graph.as_default():
         print("")
       print(" +" * 30 ) 
       #####################################################        
-       
-      ##################### OpenCV ########################
-      #현재 시간 가져오기 (초단위로 가져옴)
+
+      # Frame
       curTime = time.time()
-
-      #현재 시간에서 이전 시간을 빼면
-      #한번 돌아온 시간
       sec = curTime - prevTime
-      #이전 시간을 현재시간으로 다시 저장시킴
       prevTime = curTime
-
-      # 프레임 계산 한바퀴 돌아온 시간을 1초로 나누면 된다.
-      # 1 / time per frame
-      fps = 1/(sec) 
-
-      # 디버그 메시지로 확인해보기
-      # print("Time {0} ".format(sec))
-      # print("Estimated fps {0} ".format(fps))
-
-      # 프레임 수를 문자열에 저장
+      fps = 1/(sec)
       model_name = "ssd_inception_v2"
       str = "FPS : %0.1f" % fps
 
-      # 표시
+      # Display
       cv2.putText(image_np, model_name, (5, 20), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0))
       cv2.putText(image_np, str, (5, 40), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0))
         
@@ -153,6 +144,4 @@ with detection_graph.as_default():
       if cv2.waitKey(1) & 0xFF == ord('q'):
         cv2.destroyAllWindows()
         break
-      #####################################################
-
 
