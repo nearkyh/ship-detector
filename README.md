@@ -3,7 +3,7 @@
 A Real-time ship recognition app using [Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection) and [OpenCV](http://opencv.org/).
 
 
-## Configuration Env
+## Requirements
 
 - Ubuntu 16.04
 - Python 3.5
