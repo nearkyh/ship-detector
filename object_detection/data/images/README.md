@@ -1,4 +1,4 @@
-## The file should have the following structure.
+## ex) The file should have the following structure.
 
 images file : total 100 \
 xml file : total 100
