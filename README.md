@@ -14,12 +14,13 @@ A Real-time ship recognition app using [Tensorflow Object Detection API](https:/
 ## Getting Started
 
 Creating virtualenv
-1. virtualenv env/ship-detector --python=python3.5
-2. source env/ship-detector/bin/activate
+1. `cd ship-detector`
+2. `virtualenv env --python=python3.5`
+3. `source env/bin/activate`
 
 Binding OpenCV
-1. cd env/ship-detector/lib
-2. cp /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-x86_64-linux-gnu.so ~/env/ship-detector/lib/python3.5/site-packages
+1. cd env/lib
+2. cp /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-x86_64-linux-gnu.so ~/ship-detector/env/lib/python3.5/site-packages
 
 Install Dependencies
 - pip3 install -r requirements.txt
