@@ -1,10 +1,8 @@
-# Ship Detection App
-
-A Real-time ship recognition app using [Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection) and [OpenCV](http://opencv.org/).
+# Ship Detector
+A Real-time ship detector using [Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection) and [OpenCV](http://opencv.org/).
 
 
 ## Requirements
-
 - Ubuntu 16.04
 - Python 3.5
 - [Tensorflow 1.4](http://yongyong-e.tistory.com/10)
@@ -12,18 +10,17 @@ A Real-time ship recognition app using [Tensorflow Object Detection API](https:/
 
 
 ## Getting Started
-
 Creating virtualenv
 1. `cd ship-detector`
 2. `virtualenv env --python=python3.5`
 3. `source env/bin/activate`
 
+Install Dependencies
+- `pip3 install -r requirements.txt`
+
 Binding OpenCV
 1. `cd env/lib`
 2. `cp /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-x86_64-linux-gnu.so ~/ship-detector/env/lib/python3.5/site-packages`
-
-Install Dependencies
-- `pip3 install -r requirements.txt`
 
 Run Demo:
 - `python3 ship_detection_demo.py {filename.mp4}`
@@ -40,7 +37,6 @@ Run App:
 
 
 ## Extras
-
 - [Creating your own dataset](http://yongyong-e.tistory.com/31)
 - [Training your own dataset](http://yongyong-e.tistory.com/32)
 - [Testing your own models](http://yongyong-e.tistory.com/35)
