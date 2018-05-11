@@ -1,7 +1,7 @@
 '''
 Example usage:
 
-  python detect.py video
+  python detect.py video.mp4
 
 '''
 
