@@ -5,7 +5,7 @@ A Real-time ship detector using [Tensorflow Object Detection API](https://github
 ## Requirements
 - Ubuntu 16.04
 - Python 3.5
-- [Tensorflow 1.4](http://yongyong-e.tistory.com/10)
+- [Tensorflow 1.8](http://yongyong-e.tistory.com/10)
 - [OpenCV 3.2](http://yongyong-e.tistory.com/41)
 
 
@@ -23,7 +23,7 @@ Binding OpenCV
 2. `cp /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-x86_64-linux-gnu.so ~/ship-detector/env/lib/python3.5/site-packages`
 
 Run Demo:
-- `python3 ship_detection_demo.py {filename.mp4}`
+- `python3 detector_demo.py video.mp4`
 
 <div align='center'>
   <img src='object_detection/g3doc/img/demo20171018_093153.gif' width='600px'>
@@ -33,7 +33,7 @@ Run Demo:
 </div>
 
 Run App:
-- `python3 ship_detection_app.py`
+- `python3 detector_app.py`
 
 
 ## Extras
