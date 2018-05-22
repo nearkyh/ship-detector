@@ -28,7 +28,7 @@ MODEL_NAME = 'object_detection/export_models/inference_graph_ssd_inception_v2_15
 PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
 
 # List of the strings that is used to add correct label for each box.
-PATH_TO_LABELS = os.path.join('object_detection/data', 'object-detection.pbtxt')
+PATH_TO_LABELS = os.path.join('object_detection/data', 'ship_label_map.pbtxt')
 
 NUM_CLASSES = 1
 
