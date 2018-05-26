@@ -1,7 +1,7 @@
-tensorflow-gpu==1.8.0
 cython
 pillow
 lxml
 jupyter
 matplotlib
-opencv-python
+tensorflow-gpu==1.8.0
+opencv-python==3.4.1.15
