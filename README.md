@@ -11,20 +11,26 @@ A Real-time ship detector using [Tensorflow Object Detection API](https://github
 
 ## Getting Started
 Creating virtualenv
-1. `cd ship-detector`
-2. `virtualenv env --python=python3.5`
-3. `source env/bin/activate`
+```bash
+$ cd Ship-Detector
+$ virtualenv env --python=python3.5
+$ source env/bin/activate
+```
 
 Install Dependencies
-- `pip install -r requirements.txt`
+```bash
+$ pip install -r requirements.txt
+```
 
 Binding OpenCV
-1. `cd env/lib`
-2. `cp /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-x86_64-linux-gnu.so ~/ship-detector/env/lib/python3.5/site-packages`
+```bash
+$ cp /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-x86_64-linux-gnu.so \
+    ~/Ship-Detector/env/lib/python3.5/site-packages
+```
 
 Run Demo
 ```bash
-python detector_demo.py \
+$ python detector_demo.py \
     --input_video=video_to_test \
     --export_model=your_trained_model
 ````
@@ -38,7 +44,7 @@ python detector_demo.py \
 
 Run App
 ```bash
-python detector_app.py \
+$ python detector_app.py \
     --input_cam=your_cam_num \
     --export_model=your_trained_model
 ````
