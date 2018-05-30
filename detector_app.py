@@ -1,7 +1,9 @@
 '''
 Example usage:
 
-  python detector_app.py
+    python detector_app.py \
+        --input_cam=your_cam_num \
+        --export_model=your_trained_model
 
 '''
 
@@ -21,8 +23,14 @@ from PIL import Image
 from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as vis_util
 
+flags = tf.app.flags
+flags.DEFINE_integer('input_cam', 0, 'Cam Number.')
+flags.DEFINE_string('export_model', 'ssd_mobilenet_v1_ship_15000', 'Add your trained model.')
+FLAGS = flags.FLAGS
+
 # Model preparation
-MODEL_NAME = 'object_detection/export_models/inference_graph_ssd_inception_v2_15000'
+export_model=FLAGS.export_model
+MODEL_NAME = 'object_detection/export_models/{}'.format(export_model)
 
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
@@ -59,10 +67,10 @@ def load_image_into_numpy_array(image):
 with detection_graph.as_default():
   with tf.Session(graph=detection_graph) as sess:
     # Opencv, Video capture
-    input_video = 1
-    cap = cv2.VideoCapture(input_video)
+    input_cam = FLAGS.input_cam
+    cap = cv2.VideoCapture(input_cam)
     if cap.isOpened() == False:
-      print('Can\'t open the CAM(%d)' % (input_video))
+      print('Can\'t open the CAM(%d)' % (input_cam))
       exit()
 
     prevTime = 0  # Frame time variable
