@@ -22,8 +22,12 @@ Binding OpenCV
 1. `cd env/lib`
 2. `cp /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-x86_64-linux-gnu.so ~/ship-detector/env/lib/python3.5/site-packages`
 
-Run Demo:
-- `python detector_demo.py video.mp4`
+Run Demo
+```bash
+python detector_demo.py \
+    --input_video=video_to_test \
+    --export_model=your_trained_model
+````
 
 <div align='center'>
   <img src='object_detection/g3doc/img/demo20171018_093153.gif' width='600px'>
@@ -32,8 +36,12 @@ Run Demo:
   <img src='object_detection/g3doc/img/demo20171018_093059.gif' width='600px'>
 </div>
 
-Run App:
-- `python detector_app.py`
+Run App
+```bash
+python detector_app.py \
+    --input_cam=your_cam_num \
+    --export_model=your_trained_model
+````
 
 
 ## Extras
