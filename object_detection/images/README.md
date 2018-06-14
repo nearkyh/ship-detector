@@ -20,12 +20,12 @@ train (90 percent of the total)
   └ image_0090.xml
 
 test (10 percent of the total)
-  ├ image_0091.xml
-  ├ image_0092.xml
+  ├ image_0091.jpg
+  ├ image_0092.jpg
   ├ .
   ├ .
   ├ .
-  └ image_0100.xml
+  └ image_0100.jpg
 
   ├ image_0091.xml
   ├ image_0092.xml
