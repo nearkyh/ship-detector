@@ -29,8 +29,7 @@ flags.DEFINE_string('export_model', 'ssd_mobilenet_v1_ship_15000', 'Add your tra
 FLAGS = flags.FLAGS
 
 # Model preparation
-export_model=FLAGS.export_model
-MODEL_NAME = 'object_detection/export_models/{}'.format(export_model)
+MODEL_NAME = 'object_detection/export_models/{}'.format(FLAGS.export_model)
 
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
@@ -67,8 +66,7 @@ def load_image_into_numpy_array(image):
 with detection_graph.as_default():
   with tf.Session(graph=detection_graph) as sess:
     # Opencv, Video capture
-    input_video = FLAGS.input_video
-    cap = cv2.VideoCapture(input_video)
+    cap = cv2.VideoCapture(FLAGS.input_video)
 
     prevTime = 0  # Frame time variable
 
