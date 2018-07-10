@@ -28,6 +28,8 @@ $ cp /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-x86_64-linux-gnu.so 
     ~/Ship-Detector/env/lib/python3.5/site-packages
 ```
 
+Download frozen inference graph (ssd_mobilenet_v1_ship_15000) from the [Google Drive](https://drive.google.com/open?id=1HQxJMlF7Iaho4kuXOSjv08eDe2xRlKod).
+
 Run Demo
 ```bash
 $ python detector_demo.py \
