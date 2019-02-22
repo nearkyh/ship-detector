@@ -30,11 +30,11 @@ $ cp /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-x86_64-linux-gnu.so 
 
 Download the frozen inference graph (ssd_mobilenet_v1_ship_15000) from the [Google Drive](https://drive.google.com/open?id=1HQxJMlF7Iaho4kuXOSjv08eDe2xRlKod).
 
-Run Demo
+Run
 ```bash
-$ python detector_demo.py \
-    --input_video=video_to_test \
-    --export_model=your_trained_model
+$ python detector.py \
+    --video=video_path \
+    --model=model_name
 ````
 
 <div align='center'>
@@ -43,13 +43,6 @@ $ python detector_demo.py \
 <div align='center'>
   <img src='object_detection/g3doc/img/demo20171018_093059.gif' width='600px'>
 </div>
-
-Run App
-```bash
-$ python detector_app.py \
-    --input_cam=your_cam_num \
-    --export_model=your_trained_model
-````
 
 
 ## Extras

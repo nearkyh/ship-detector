@@ -1,12 +1,3 @@
-'''
-Example usage:
-
-    python detector_app.py \
-        --input_cam=your_cam_num \
-        --export_model=your_trained_model
-
-'''
-
 import tensorflow as tf
 import numpy as np
 import os
