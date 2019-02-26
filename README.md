@@ -5,7 +5,7 @@ A Real-time ship detector using [Tensorflow Object Detection API](https://github
 ## Requirements
 - Ubuntu 16.04
 - Python 3.5
-- [Tensorflow 1.8](http://yongyong-e.tistory.com/10)
+- [TensorFlow 1.9](http://yongyong-e.tistory.com/10)
 - [OpenCV 3.2](http://yongyong-e.tistory.com/41)
 
 
@@ -32,10 +32,13 @@ Download the frozen inference graph (ssd_mobilenet_v1_ship_15000) from the [Goog
 
 Run
 ```bash
-$ python detector.py \
-    --video=video_path \
-    --model=model_name
-````
+$ python detector.py
+```
+
+Optional arguments (default value):
+* Video to test `--video=test.mp4`
+* Device index of the camera `--camera=None`
+* Saved model name `--model=ssd_inception_v2_ship_15000`
 
 <div align='center'>
   <img src='object_detection/g3doc/img/demo20171018_093153.gif' width='600px'>
@@ -43,6 +46,13 @@ $ python detector.py \
 <div align='center'>
   <img src='object_detection/g3doc/img/demo20171018_093059.gif' width='600px'>
 </div>
+
+
+## Using GPU
+Requirements [(Install reference)](http://yongyong-e.tistory.com/10)
+- [Tensorflow-GPU 1.9](https://www.tensorflow.org/install)
+- [CUDA 9.0](https://developer.nvidia.com/cuda-downloads)
+- [cuDNN 7.1.4](https://developer.nvidia.com/cudnn)
 
 
 ## Extras

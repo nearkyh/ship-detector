@@ -27,15 +27,15 @@ object_detection/protos/__pycache__/
 
 object_detection/utils/__pycache__/
 
-object_detection/inference_graph/ssd_mobilenet_v1_ship_15000/
+object_detection/saved_models/ssd_mobilenet_v1_ship_15000/
 
-object_detection/inference_graph/ssd_inception_v2_ship_15000/
+object_detection/saved_models/ssd_inception_v2_ship_15000/
 
-object_detection/inference_graph/rfcn_resnet101_ship_15000/
+object_detection/saved_models/rfcn_resnet101_ship_15000/
 
-object_detection/inference_graph/faster_rcnn_resnet101_ship_15000/
+object_detection/saved_models/faster_rcnn_resnet101_ship_15000/
 
-object_detection/inference_graph/faster_rcnn_inception_resnet_v2_ship_15000/
+object_detection/saved_models/faster_rcnn_inception_resnet_v2_ship_15000/
 
 *.mp4
 
